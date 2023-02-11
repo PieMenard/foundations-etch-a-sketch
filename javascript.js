@@ -34,13 +34,11 @@ function draw(e){
 }
 
 function pencilDraw(e) {
-    if (e.style.backgroundColor.match(/rgba/)) {
-        let currentOpacity = Number(e.style.backgroundColor.slice(-4, -1));
-        if (currentOpacity <= 0.9) {
-            e.style.backgroundColor = `rgba(0, 0, 0, ${currentOpacity + 0.1})`;
-            
-        }
+    let currentOpacity = Number(e.style.backgroundColor.slice(-4, -1));
+    if (currentOpacity <= 0.9) {
+     e.style.backgroundColor = `rgba(0, 0, 0, ${currentOpacity + 0.1})`;
     }
+   
 }
 
 function setGrid(x)
